@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using MyTe.Models;
+using myte.Models;
 using System.Diagnostics;
 
-namespace MyTe.Controllers
+namespace myte.Controllers
 {
     public class HomeController : Controller
     {

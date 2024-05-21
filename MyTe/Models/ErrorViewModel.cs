@@ -1,4 +1,4 @@
-namespace MyTe.Models
+namespace myte.Models
 {
     public class ErrorViewModel
     {

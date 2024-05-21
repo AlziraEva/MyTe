@@ -1,0 +1,26 @@
+﻿@model Departamento
+
+@{
+    ViewData["Title"] = "Criar Departamento";
+}
+
+<div class="master-depart-frorm-criar">
+<div class="centro">
+    <!-- Conteúdo da div aqui -->
+    
+            <form class="frame-parent" method="post">
+                <div class="label-titulo">
+                 <p>Criar Departamento</p>
+                </div>
+                <div class="label"> <label asp-for="Nome">Nome do Departamento</label> </div>
+                
+                <input class="text-input" asp-for="Nome" />
+
+            <div class="botoes-criar-departamento">
+                <button asp-action="Index" class="botao-cancelar-depart">Cancelar</button>
+                <button class="botao-salvar-depart" type="submit">Salvar</button>
+                
+            </div>
+        </form>
+    </div>
+</div>

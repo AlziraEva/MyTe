@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Departamento>
+
+@{
+    ViewData["Title"] = "Gestão de departamentos";
+}
+
+
+@* Barra superior de navegação e pesquisa*@
+<div class="bg-white shadow custom-mt d-flex" style="height: 70px;">
+
+    <div class="col-md-5 d-flex">
+
+        <a asp-action="#" class="botao-navegacao component-43 col m-2 p-2">
+        <img class="icones-adm" alt="" src="/assets/icones adm.svg">
+        <div class="funcionario">Funcionário</div>
+    </a>
+
+    <div class="component-44 col m-2 p-2">
+            <img class="icones-adm" alt="" src="/assets/Group2.svg">
+        <div class="departamento">Departamento</div>
+    </div>
+
+    <a asp-action="#" class="botao-navegacao component-42 col m-2 p-2">
+        <img class="icones-adm" alt="" src="/assets/icones dashb.svg">
+        <div class="dashboard">Dashboard</div>
+    </a>
+
+    <a asp-action="#" class="botao-navegacao component-41 col m-2 p-2 ">
+        <img class="icones-adm" alt="" src="/assets/icone myte.svg">
+        <div class="myte">MyTE</div>
+    </a>
+
+    </div>
+
+   <div class="col-md-2"></div> <!-- Div vazia para espaço -->
+
+    <div class="col-md-4 m-2 p-2">
+        <!-- Barra de pesquisa do Bootstrap -->
+        <div class="input-group">
+            <input class="form-control form-control-sm" type="text" placeholder="Pesquisar">
+            <span class="input-group-text"><img src="/assets/↳Color.svg" alt="Lupa" style="width: 15px;"></span>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+@* Botão criar departamento *@
+<div class="d-flex justify-content-end">
+    
+    <a class="btn btn-primary mt-5 mb-5 mr-3 botao-criar" asp-action="Create">
+            Criar Departamento
+    </a> 
+</div>
+ 
+
+
+@* listagem dos departamentos*@
+<div class="container mt-3 custom-container">
+    <div class="row row-cols-md-4">
+        @foreach (Departamento registro in Model)
+        {
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="position-relative img-card mb-3">
+                            <img src="/assets/Group.svg" class="card-img-top img-fluid imagem-card" alt="...">
+                        </div>
+                        <div class="nome-departamento text-center mb-3">
+                            <p class="text-dark fs-5 fw-semibold font-family-Roboto m-0 input-card">@registro.Nome</p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="mb-2 mr-2">
+
+                                <a class="btn btn-outline-light botao-atualizar botao-atualizar-excluir"  asp-action="Update" asp-route-identificador="@registro.Nome">Atualizar</a>
+                                
+                            </div>
+                            <div class="mb-2">
+                                <form asp-action="Delete" asp-route-identificador="@registro.Nome" method="post">
+                                    <button class="btn btn-outline-danger botao-atualizar-excluir" data-id="@registro.Nome">Excluir</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

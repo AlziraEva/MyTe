@@ -1,22 +1,371 @@
-html {
-  font-size: 14px;
+.adm-div {
+    color: #A155B9;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.bg-custom {
+    background-color: #e8d8ff;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+/* Estilo personalizado para ajustar a margem superior */
+.custom-mt {
+    margin-top: 2rem; 
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    line-height: normal;
+}
+
+:root {
+    /* fonts */
+    --font-roboto: Roboto;
+    /* Paddings */
+    --padding-3xs: 10px;
+}
+
+
+
+/*CREATE Departamento - Barra superior de navegação e pesquisa*/
+
+
+.custom-container {
+    margin-right: auto; /* Define a margem direita como automática para centralizar o container */
+    margin-left: auto; /* Define a margem esquerda como automática para centralizar o container */
+    max-width: 90%; /* Define a largura máxima do container */
+}
+
+.nome-departamento {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    width: 200px; /* Ou qualquer outro valor desejado */
+    padding: 5px; /* Ou qualquer outro valor desejado */
+}
+
+
+
+.icones-adm {
+    width: 60%;
+    position: relative;
+    height: 60%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.funcionrio {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.component-43 {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    background-color: #e8def8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs) var(--padding-3xs) 5px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 10px;
+    color: #414141;
+    font-family: var(--font-roboto);
+}
+
+.departamento {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.component-44 {
+    position: relative;
+    border-radius: 10px;
+    background-color: #a155b9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs) var(--padding-3xs) 5px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 10px;
+    color: #fff;
+    font-family: var(--font-roboto);
+}
+
+
+.dashboard {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.component-42 {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    background-color: #e8def8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs) var(--padding-3xs) 5px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 10px;
+    color: #414141;
+    font-family: var(--font-roboto);
+}
+
+.myte {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+    
+}
+
+.component-41 {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    background-color: #e8def8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs) var(--padding-3xs) 5px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 10px;
+    color: #414141;
+    font-family: var(--font-roboto);
+}
+
+
+/* Botão de criar departamento*/
+.botao-criar {
+    margin-right: 10%;
+    background-color: #8B24AC;
+    color: #FFFFFF;
+    border-color: #8B24AC;
+}
+
+.botao-criar:hover {
+    color: #8B24AC;
+    background-color: #FFFFFF;
+    border-color: #8B24AC;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+    a:hover {
+        outline: none;
+        color: #000;
+    }
+
+/* Botão atualizar departamento */
+
+.botao-atualizar {
+    background-color: #e8d8ff;
+    color: #8B24AC;
+    border-color: #e8d8ff;
+}
+
+    .botao-atualizar:hover {
+        color: #e8d8ff;
+        background-color: #8B24AC;
+        border-color: #8B24AC;
+    }
+
+  /* Botao funcionario */
+.botao-navegacao:hover,
+.botao-navegacao:focus,
+.botao-navegacao:active {
+    background-color: #a155b9;
+    color: #FFFFFF;
+}
+
+    .botao-navegacao:hover img,
+    .botao-navegacao:focus img,
+    .botao-navegacao:active img {
+        filter: none; /* Remove quaisquer filtros anteriores */
+        fill: white;
+    }
+
+
+.card {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+   
+}
+
+.botao-atualizar-excluir {
+    font-size: 0.8rem; /* Tamanho da fonte 80% menor */
+    padding: 0.25rem 0.5rem; /* Padding menor */
+}
+
+.input-card {
+    min-height: 60px;
+}
+
+/* VIEW - CREATE*/
+
+.master-depart-frorm-criar {
+    background-color: #F7F2F9;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 45px;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+
+
+.frame-parent {
+height: 70%;
+position: relative;
+width: 70%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+gap: 10px;
+text-align: left;
+font-size: var(--font-size-xl);
+color: var(--color-darkslategray-100);
+font-family: var(--font-roboto);
+
+}
+
+.centro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 50px rgba(103, 80, 164, 0.2);
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #FFFF;
+    padding: 3%;
+    text-align: left;
+}
+
+.label-titulo {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 42px;
+    color: #414141;
+    font-family: var(--font-roboto);
+}
+
+.label {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 15%;
+    color: #000;
+    text-align: left;
+    font-weight: bold;
+}
+
+.text-input {
+    box-shadow: 0px 2px 4px rgba(66, 80, 102, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1.5px solid rgba(66, 80, 102, 0.6);
+    box-sizing: border-box;
+    height: 45px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 6px;
+    width: 100%
+}
+
+.botoes-criar-departamento {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px 0px 0px;
+    box-sizing: border-box;
+    gap: 19px;
+    text-align: left;
+    font-size: var(--font-size-xl);
+    font-family: var(--font-roboto);
+}
+
+.botao-salvar-depart {
+    position: relative;
+    border-radius: 10px;
+    background-color: #a155b9;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+    border: none; /* Remove border */
+    outline: none;
+    box-shadow: 0px 2px 2px rgba(103, 80, 164, 0.3);
+}
+
+.botao-cancelar-depart {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 20px;
+    color: #414141;
+    font-family: var(--font-roboto);
+    line-height: 20px;
+    border: none; /* Remove border */
+    outline: none;
+    box-shadow: 0px 2px 2px rgba(103, 80, 164, 0.3);
+}
+
+.botao-salvar-depart:hover {
+    background-color: #fff;
+    color: #a155b9;
+}
+
+.botao-cancelar-depart:hover {
+    background-color: #414141;
+    color: #fff
 }
